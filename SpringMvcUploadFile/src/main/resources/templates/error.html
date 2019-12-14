@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <title id="pageTitle">Error page</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+<div class="container">
+
+
+<!--    <h1 th:with="httpStatus=${T(org.springframework.http.HttpStatus).valueOf(#response.status)}"></h1>-->
+
+<!--    <h1 th:text="|${httpStatus} - ${httpStatus.reasonPhrase}|">404</h1>-->
+    <div class="row justify-content-center">
+        <div class="col">
+                <div class="text-center">
+                    <h2>Error page</h2>
+                </div>
+            <div class="alert alert-danger alert-dismissible">
+                <strong><p class="text-center" th:text="'Reason: ' + ${error}"></p></strong>
+            </div>
+            <a href="admin-welcome.html" th:href="@{/default}">Back to Home Page</a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

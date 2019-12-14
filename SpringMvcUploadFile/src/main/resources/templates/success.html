@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <title id="pageTitle">Success page</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col">
+            <div class="text-center">
+                <h2>Uploading already done!</h2>
+            </div>
+            <div th:if="${message}" class="alert alert-success alert-dismissible">
+                <strong><p class="text-center" th:text="${message}"></p></strong>
+            </div>
+            <a href="admin-welcome.html" th:href="@{/index}">Back to Home Page</a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

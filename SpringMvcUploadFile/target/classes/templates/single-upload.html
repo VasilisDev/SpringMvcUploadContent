@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title id="pageTitle">Upload File</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+
+</head>
+
+<body>
+
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+
+<div class="container mt-3 ">
+    <div class="row justify-content-center">
+        <h2>Upload Single File</h2>
+    </div>
+    <div class="row justify-content-center">
+    <form id="singleUploadForm" method="POST" th:action="@{/admin/upload/single}" enctype="multipart/form-data">
+        <input type="file" id="myFile" name="file">
+
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    <div class="mt-2" th:if="${message}">
+        <div id="singleFileUploadSuccess" >
+            <h2  th:text="${message}"></h2>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
